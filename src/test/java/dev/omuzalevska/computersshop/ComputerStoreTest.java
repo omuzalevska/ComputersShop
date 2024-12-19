@@ -1,5 +1,5 @@
 package dev.omuzalevska.computersshop;
 
-public class ComputerTest {
+public class ComputerStoreTest {
     
 }

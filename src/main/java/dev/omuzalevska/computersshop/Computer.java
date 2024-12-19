@@ -15,6 +15,16 @@ public class Computer {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+    return "Computer: " +
+            "Brand='" + brand + '\'' +
+            ", Memory=" + memory + "Gb" +
+            ", Processor='" + processor + '\'' +
+            ", OS='" + operatingSystem + '\'' +
+            ", Price=" + price +
+            '$';
+}
     public String getBrand() {
         return brand;
     }
