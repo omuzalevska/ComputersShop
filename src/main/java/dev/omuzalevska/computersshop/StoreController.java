@@ -21,23 +21,17 @@ public class StoreController {
             model.removeComputer(brand);
         }
     
-        // public void searchComputer(String brand) {
-        //     view.showMessage("Searching for a computer...");
-        //     model.searchComputer(brand);
-        // }
         public void searchComputer(String brand) {
             ArrayList<Computer> matchingComputers = model.searchComputersByBrand(brand);
             if (matchingComputers.isEmpty()) {
                 view.showMessage("No computers found for brand: " + brand);
             } else {
-                view.showComputers(matchingComputers); // список знайдених
+                view.showComputers(matchingComputers); 
             }
         }
-        // public void listComputers() {
-        //     view.showComputers(model.listComputers());
-        // }
+      
         public void listComputers() {
-            ArrayList<Computer> computers = model.listComputers(); // список із моделі
-            view.showComputers(computers); //  у View для відображення
+            ArrayList<Computer> computers = model.listComputers(); 
+            view.showComputers(computers); 
         }
     }

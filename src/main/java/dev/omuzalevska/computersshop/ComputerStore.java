@@ -31,15 +31,6 @@ public class ComputerStore {
         System.out.println("No computer found with the brand: " + brand);
     }
 
-    // public void searchComputer(String brand) {
-    //     for (Computer computer : computers) {
-    //         if (computer.getBrand().equalsIgnoreCase(brand)) {
-    //             System.out.println("Found: " + computer);
-    //             return;
-    //         }
-    //     }
-    //     System.out.println("No computer found with the brand: " + brand);
-    // }
     public ArrayList<Computer> searchComputersByBrand(String brand) {
         ArrayList<Computer> matchingComputers = new ArrayList<>();
         for (Computer computer : computers) {
@@ -47,20 +38,44 @@ public class ComputerStore {
                 matchingComputers.add(computer);
             }
         }
-        return matchingComputers; // Повертаємо всі знайдені комп'ютери
+        return matchingComputers; 
     }
-    
+
     public ArrayList<Computer> listComputers() {
         return computers;
     }
-    // public void listComputers() {
-    //     if (computers.isEmpty()) {
-    //         System.out.println("No computers available in the store.");
-    //     } else {
-    //         System.out.println("List of computers in the store:");
-    //         for (Computer computer : computers) {
-    //             System.out.println(computer);
-    //         }
-    //     }
-    // }
+    
+    public String getStoreName() {
+        return storeName;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public String getTaxId() {
+        return taxId;
+    }
+
+    public ArrayList<Computer> getComputers() {
+        return computers;
+    }
+
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public void setTaxId(String taxId) {
+        this.taxId = taxId;
+    }
+
+    public void setComputers(ArrayList<Computer> computers) {
+        this.computers = computers;
+    }
+
+    
 }
